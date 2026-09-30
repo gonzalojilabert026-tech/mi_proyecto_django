@@ -59,7 +59,7 @@ ROOT_URLCONF = 'mi_proyecto_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,7 +70,6 @@ TEMPLATES = [
         },
     },
 ]
-
 WSGI_APPLICATION = 'mi_proyecto_django.wsgi.application'
 
 
@@ -121,6 +120,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
