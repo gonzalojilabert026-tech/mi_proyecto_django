@@ -1,0 +1,19 @@
+{% extends 'app1/base.html' %}
+
+{% block title %}
+Inicio App1
+{% endblock %}
+
+{% block content %}
+<h1>Bienvenido a App1</h1>
+
+<p>Esta es la página de inicio de App1.</p>
+
+<h2>Lista de elementos</h2>
+
+<ul>
+    {% for item in lista_elementos %}
+        <li>ID: {{ item.id }} - Nombre: {{ item.nombre }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
